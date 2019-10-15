@@ -46,7 +46,6 @@ Phylogenetic analysis and visualization:
 {% include wellcome-trust.html %}
 
 <div class="pagebreak"> </div>
-
 ## Preparation
 
 Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html). This should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics can be performed largely off-line. 
@@ -73,7 +72,7 @@ run are. Common locations are:
    - Mac: ```/Library/MinKNOW/data/reads/run_name```
    - Linux: ```/var/lib/MinKNOW/data/reads```
    - Windows ```c:/data/reads```
-   
+
 This will create a folder called `run_name` with the base-called reads in it.
 
 ### Consensus sequence generation
@@ -112,9 +111,9 @@ artic demultiplex --threads 4 run_name_all.fastq
 Now you will have new files called:
 
 ```bash
-run_name_all_BC01.fastq
-run_name_all_BC02.fastq
-run_name_all_BC03.fastq
+run_name_all-BC01.fastq
+run_name_all-BC02.fastq
+run_name_all-BC03.fastq
 ```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
@@ -125,15 +124,19 @@ nanopolish index -s run_name_sequencing_summary.txt -d /path/to/reads run_name_a
 
 Again, alter ``/path/to/reads`` to point to the original location of the FAST5 files.
 
+> **Troubleshooting**
+>
+> If `nanopolish` throws an error, it is possible that the `run_name_sequencing_summary.txt` may be in a new unrecognised format. You can try removing `-s  run_name_sequencing_summary.txt` from the command (warning: this will take a lot longer).
+
 ## Run the MinION pipeline
 
 For each barcode you wish to process:
 
 ```bash
-artic minion --normalise 200 --threads 4 --scheme-directory artic-ebov/primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
+artic minion --normalise 200 --threads 4 --scheme-directory primer_schemes --read-file run_name_all-NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
 ```
 
-Replace ``samplename`` as appropriate:
+Replace ``samplename`` as appropriate. Note that the `primer_schemes` directory should contain a directory for the named scheme (`ZaireEbola/V2`), which should include a pair of files ending `.reference.fasta` and ` .scheme.bed`
 
 ## Output files
 

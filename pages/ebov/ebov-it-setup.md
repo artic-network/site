@@ -40,7 +40,6 @@ Phylogenetic analysis and visualization:
 {% include wellcome-trust.html %}
 
 <div class="pagebreak"> </div>
-
 ## Preparation
 
 #### Equipment required:
@@ -61,7 +60,7 @@ The steps in this document should be done and tested prior to sequencing, partic
 ### Conda
 
 Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
- 
+
 For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install. 
 
 > *NOTE:* Install the `64-bit Python 3.6` version of Miniconda
@@ -80,13 +79,15 @@ Create a custom Conda environment for running software. This may take some time 
 conda env create -f artic-ebov/environment.yml
 ```
 
+<!-- No longer valid, there is no install of fieldbioinformatics directly in the artic-ebov directory
+
 ```bash
 cd artic-ebov/fieldbioinformatics
 python setup.py install
 cd ../..
 ```
 
-
+-->
 <!-- No longer necessary given environment yml file.
 First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
 
@@ -96,7 +97,7 @@ conda config --add channels bioconda
 ```
 
 Create an custom environment for running software and install the packages:
-  
+
 ```bash
 conda create -n artic-ebov
 ```
