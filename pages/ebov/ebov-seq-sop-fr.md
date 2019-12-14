@@ -215,7 +215,7 @@ Le stock d'amorces 100nM doivent être préparées et aliquotées AVANT LE DÉPA
 
     9. Enlever et jeter avec précaution l'éthanol, en faisant attention de ne pas toucher le culot de billes.
 
-    10. Répeter les étapes `i` à `j` pour laver à nouveau le culot.
+    10. Répeter les étapes `h` à `i` pour laver à nouveau le culot.
 
     11. Centrifuger brièvement le culot et enlever avec précaution autant d'éthanol que possible en utilisant un cône de 10&micro;L.
 
