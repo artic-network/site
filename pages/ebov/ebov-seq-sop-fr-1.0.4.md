@@ -185,6 +185,7 @@ Le stock d'amorces 100nM doivent être préparées et aliquotées AVANT LE DÉPA
 5. Placer les tubes dans la machine mini16 PCR, démarrer le programme de PCR comme suit:
 
 > **NOTE :** La machine mini16 PCR doit être connectée au "PowerAdd", qui joue le rôle d'un UPS, en cas de coupure de courant.
+<&nbsp>    
     |Étape                     |Temperature |Temps       |Cycles
     |--------------------------|------------|------------|-------
     |Activation par la chaleur |98&deg;C    |30 secondes |1
