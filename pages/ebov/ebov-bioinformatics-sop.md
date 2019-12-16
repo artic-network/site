@@ -151,6 +151,7 @@ Now you will have new files called:
 run_name_pass_NB01.fastq
 run_name_pass_NB02.fastq
 run_name_pass_NB03.fastq
+```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
 
@@ -170,13 +171,13 @@ E.g. for NB01
 artic minion --normalise 200 --threads 4 --scheme-directory ~/artic/artic-ebov/primer-schemes --read-file run_name_pass_NB01.fastq --nanopolish-read-file run_name_pass.fastq IturoEbola/V1 samplename
 ```
 
+Replace ``samplename`` as appropriate.
+
 E.g. for NB02
 
 ```bash
 artic minion --normalise 200 --threads 4 --scheme-directory ~/artic/artic-ebov/primer-schemes --read-file run_name_pass_NB02.fastq --nanopolish-read-file run_name_pass.fastq IturoEbola/V1 samplename
 ```
-
-Replace ``samplename`` as appropriate:
 
 ## Output files
 
@@ -191,8 +192,9 @@ To put all the consensus sequences in one filei called my_consensus_genome, run
 
 ## To visualise genomes in Tablet
 
+Open a new Terminal window:
+
 ```bash
-conda deactivate
 conda activate tablet
 tablet
 ```
