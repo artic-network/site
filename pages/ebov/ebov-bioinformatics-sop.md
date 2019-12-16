@@ -189,7 +189,8 @@ artic minion --normalise 200 --threads 4 --scheme-directory ~/artic/artic-ebov/p
 To put all the consensus sequences in one filei called my_consensus_genome, run
 
 ```bash
-cat *.consensus.fasta > my_consensus_genomes.fasta```
+cat *.consensus.fasta > my_consensus_genomes.fasta
+```
 
 ## To visualise genomes in Tablet
 
